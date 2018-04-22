@@ -14,10 +14,6 @@ const app = new Koa();
 //   console.log(4);
 // });
 
-app.use(async (ctx, next) => {
-  ctx.body = 'Hello World';
-});
-
 // app.use(require('./koa-error'))
 
 // process.on('unhandledRejection', (err) => {
@@ -27,5 +23,10 @@ app.use(async (ctx, next) => {
 // process.on('uncaughtException', (err) => {
 //   console.error(`uncaughtException: ${err.message}, stack: ${err.stack}`);
 // });
+
+app.use(async (ctx, next) => {
+  ctx.body = 'Hello World';
+});
+
 
 app.listen(3000);
